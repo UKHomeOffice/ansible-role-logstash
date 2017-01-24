@@ -1,0 +1,11 @@
+---
+docker_registry: quay.io
+INPUT_DATA_SYSLOG: true
+elasticsearch_server: elastic.example.com
+elasticsearch_port: 32705 
+logstash_image_tag: v1.1.7
+logstash_image: "logstash-es"
+volumes:
+  - "/var/log:/var/logs"
+  - "/var/lib/pgsql/9.5/data/pg_log:/var/pg_log"
+  - "/data/00/log:/data/log"
